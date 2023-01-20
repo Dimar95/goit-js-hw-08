@@ -9,7 +9,8 @@ const galleryRef = document.querySelector('.gallery')
 // console.log(galleryItems);
 onMarkupGallery(galleryItems)
 function onMarkupGallery(imgArray) {
-    galleryRef.innerHTML = imgArray.map(img => `<a class="gallery__item" href="${img.original}">
+    galleryRef.innerHTML = imgArray.map(img => `
+    <a class="gallery__item" href="${img.original}">
   <img class="gallery__image" src="${img.preview}" alt="${img.description}" title=""/>
 </a>`).join('');
         var lightbox = new SimpleLightbox('.gallery a', {
